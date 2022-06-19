@@ -5,7 +5,7 @@
 {
   "port": 3000, // 服务运行端口
   "host": "localhost", // 主机地址(默认即可)
-  "proxy_url": "https://www.youtube.com" // 要进行反向代理的地址
+  "proxy_url": "https://www.google.com" // 要进行反向代理的地址
 }
 ```
 
