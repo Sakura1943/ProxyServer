@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "license": "AGPL-3.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "serve": "nodemon",
+    "build": "tsdx build"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "render_proxy",
+  "author": "sakura1943",
+  "module": "dist/render_proxy.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/render_proxy.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/render_proxy.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@types/http-proxy-middleware": "^1.0.0",
+    "@types/koa": "^2.13.4",
+    "@types/koa-log4": "^2.3.3",
+    "@types/koa-router": "^7.4.4",
+    "@types/koa2-cors": "^2.0.2",
+    "husky": "^8.0.1",
+    "nodemon": "^2.0.16",
+    "size-limit": "^7.0.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "http-proxy-middleware": "^2.0.6",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-log4": "^2.3.2",
+    "koa-router": "^10.1.1",
+    "koa2-connect": "^1.0.2",
+    "koa2-cors": "^2.0.6"
+  }
+}
